@@ -11,7 +11,12 @@ The Storm sample shown during my talk at Java Forum Stuttgart 2013
 * currently runs it in local mode only
 * displays the counts through a bar chart using D3.js
 
-### Quick Start Example
+## Prerequisites
+* Maven
+* Redis installed and running
+* Cassandra installed and running
+
+## Quick Start
 
 To run the filter stream example, navigate to the storm-java-forum folder and enter
 
