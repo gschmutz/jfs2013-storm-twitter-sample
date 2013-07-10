@@ -24,4 +24,4 @@ To start the web server providing the visualization, navigate to the storm-java-
 mvn package jetty:run
 ```
 
-in a web browser, navigate to http://localhost:8484/storm-java-forum-restapi/ to show the bar chart with the actual values from Redis. 
+in a web browser, navigate to [http://localhost:8484/storm-java-forum-restapi/] to show the bar chart with the actual values from Redis. 
