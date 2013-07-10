@@ -6,6 +6,9 @@ The Storm sample shown during my talk at Java Forum Stuttgart 2013
 ## Features
 * subscribes to the Twitter Filter Streaming API and filters on a given term (hashtag)
 * counts the hashtags in the tweet in a Redis database
+* inserts the contents of the tweets into a Cassandra database
+* implemented as a plain Storm as well as a Trident topology
+* currently runs it in local mode only
 * displays the counts through a bar chart using D3.js
 
 ### Quick Start Example
