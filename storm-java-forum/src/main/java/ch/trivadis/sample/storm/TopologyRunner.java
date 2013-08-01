@@ -17,7 +17,7 @@ public class TopologyRunner {
 		TopologyBuilder builder = new TopologyBuilder();
 
 		builder.setSpout("tweet-stream", new TwitterStreamingSpout(
-				consumerKey, consumerSecret, token, secret, new String[] { "#JFS2013" }), 1);
+				consumerKey, consumerSecret, token, secret, new String[] { "#BigData", "#NoSQL", "#Hadoop" }), 1);
 		//builder.setSpout("tweet-stream", new TwitterStreamingSpoutMock(), 1);
 		
 		
@@ -41,11 +41,8 @@ public class TopologyRunner {
 	 */
 	public static void main(String[] args) throws InterruptedException {
 
-		StormTopology topology = createTopology("2dYX9qPSedKkB1aDzKXeMg",
-				"gEsVlaUxtfhGOfKBDBlwX9X81xqq7LgvINpoQgSp0",
-				"852289452-HqMNv1tRivSmbbMC9ZYtWzTkDu7vlEe9rp3NWn1b",
-				"4zed17zTNQJmINzkBGQP3EbEtBRPkY9L4U1hcuASshg");
-
+		StormTopology topology = createTopology(args[0],args[1],args[2],args[3]);
+		
 		Config conf = new Config();
 		conf.setDebug(true);
 

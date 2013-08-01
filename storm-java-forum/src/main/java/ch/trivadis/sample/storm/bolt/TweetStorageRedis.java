@@ -23,7 +23,7 @@ public class TweetStorageRedis extends BaseBasicBolt {
 	@Override
 	public void execute(Tuple input, BasicOutputCollector collector) {
 		Status tweet = (Status)input.getValueByField("tweet");
-		jedis.hset("jfs2013:tweets", String.valueOf(tweet.getId()), tweet.getText());
+		jedis.hset("tweet:hashtags", String.valueOf(tweet.getId()), tweet.getText());
 	}
 
 	@Override

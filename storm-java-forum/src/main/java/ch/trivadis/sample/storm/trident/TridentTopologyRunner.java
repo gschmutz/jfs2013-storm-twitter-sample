@@ -24,7 +24,7 @@ public class TridentTopologyRunner {
 				"localhost", 6379));
 
 		TwitterStreamingSpout spout = new TwitterStreamingSpout(consumerKey,consumerSecret, token, secret, 
-																new String[] { "#JFS2013" });
+																new String[] { "#BigData" , "#NoSql" });
 
 		TridentTopology topology = new TridentTopology();
 		TridentState wordCounts = topology.newStream("twitter-stream", spout)
@@ -42,10 +42,7 @@ public class TridentTopologyRunner {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		StormTopology topology = createTopology("2dYX9qPSedKkB1aDzKXeMg",
-				"gEsVlaUxtfhGOfKBDBlwX9X81xqq7LgvINpoQgSp0",
-				"852289452-HqMNv1tRivSmbbMC9ZYtWzTkDu7vlEe9rp3NWn1b",
-				"4zed17zTNQJmINzkBGQP3EbEtBRPkY9L4U1hcuASshg");
+		StormTopology topology = createTopology(args[0],args[1],args[2],args[3]);
 		
 		LocalDRPC drpc = new LocalDRPC();
 		Config conf = new Config();

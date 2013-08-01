@@ -141,6 +141,27 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2.1</version>
+				<executions>
+				<execution>
+					<goals>
+						<goal>java</goal>
+					</goals>
+				</execution>
+				</executions>
+				<configuration>
+					<mainClass>ch.trivadis.sample.storm.TopologyRunner</mainClass>
+						<arguments>
+							<argument>${consumer.key}</argument>
+							<argument>${consumer.secret}</argument>
+							<argument>${access.token}</argument>
+							<argument>${access.token.secret}</argument>
+						</arguments>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
